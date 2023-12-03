@@ -35,23 +35,23 @@ R1 = 40 + N
 R2 = 40 + N
 R3 = 40 + N
 
-y1, x1 = opt.fsolve(f1, (0.1, 1))
+x1, y1 = opt.fsolve(f1, (0.1, 1))
 x2, y2 = opt.fsolve(f2, (0.1, 1))
 x3, y3 = opt.fsolve(f3, (0.1, 1))
-x1, y1,x2, y2, x3, y3 = 142, 100, 141.5, 104, 136.5, 100.4
+x1, y1, x2, y2, x3, y3 = 100, 100, 146, 146, 166, 71
 
 
 print('\nx\u2081 - ', x1, '\t\ty\u2081 - ', y1)
 print('x\u2082 - ', x2, '\ty\u2082 - ', y2)
 print('x\u2083 - ', x3, '\ty\u2083 - ', y3)
 
-aa = sqrt((x2 - x3) ** 2 - (y2 - y3) ** 2)
+aa = sqrt((x2 - x1) ** 2 - (y2 - y1) ** 2)
 print('\naa = ', aa)
 
-bb = sqrt((x1 - x3) ** 2 - (y1 - y3) ** 2)
+bb = sqrt((x3 - x2) ** 2 - (y2 - y3) ** 2)
 print('bb = ', bb)
 
-cc = sqrt(abs((x1 - x2) ** 2 - (y1 - y2) ** 2))
+cc = sqrt(abs((x3 - x1) ** 2 - (y1 - y3) ** 2))
 print('cc = ', cc)
 
 h = (aa + bb + cc) / 2
