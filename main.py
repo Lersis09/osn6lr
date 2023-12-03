@@ -24,7 +24,7 @@ def f3(variables):
     return first_eq, second_eq
 
 
-N = 2
+N = 6
 xa = 100
 xb = 140 + N
 xc = 160 + N
